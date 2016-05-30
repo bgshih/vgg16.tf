@@ -51,7 +51,7 @@ class Vgg16Model():
       relu5_1 = self._vgg_conv_relu(pool4, 512, 512, 'conv5_1')
       relu5_2 = self._vgg_conv_relu(relu5_1, 512, 512, 'conv5_2')
       relu5_3 = self._vgg_conv_relu(relu5_2, 512, 512, 'conv5_3')
-      pool5 = self._vgg_max_pool(relu5_3, 'pool4')
+      pool5 = self._vgg_max_pool(relu5_3, 'pool5')
       # fc6
       n_conv_out = 7*7*512
       flatten = tf.reshape(pool5, [-1,n_conv_out])
